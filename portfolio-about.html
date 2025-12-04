@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Dhvani Mistry</title>
+    <meta name="description" content="Learn more about Dhvani Mistry beyond code: strength training, plants, and mentoring at Iowa State." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        secondary: "#1e40af",
+                        accent: "#f59e0b",
+                        plant: "#10b981",
+                        gym: "#ef4444"
+                    },
+                    fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Brand links back to main portfolio -->
+                <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-primary transition-colors">
+                    Dhvani Mistry
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="text-gray-600 hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#fitness" class="text-gray-600 hover:text-primary transition-colors" onclick="handleNavigation(event, '#fitness')">Fitness</a>
+                    <a href="#plants" class="text-gray-600 hover:text-primary transition-colors" onclick="handleNavigation(event, '#plants')">Plant Corner</a>
+                    <a href="#community" class="text-gray-600 hover:text-primary transition-colors" onclick="handleNavigation(event, '#community')">Community</a>
+                </div>
+                <button class="md:hidden text-gray-600" id="mobileMenuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile nav -->
+            <div id="mobileMenu" class="md:hidden hidden pt-3 space-y-2">
+                <a href="index.html#home" class="block px-2 py-2 rounded hover:bg-gray-100">Portfolio</a>
+                <a href="#fitness" class="block px-2 py-2 rounded hover:bg-gray-100" onclick="handleNavigation(event, '#fitness')">Fitness</a>
+                <a href="#plants" class="block px-2 py-2 rounded hover:bg-gray-100" onclick="handleNavigation(event, '#plants')">Plant Corner</a>
+                <a href="#community" class="block px-2 py-2 rounded hover:bg-gray-100" onclick="handleNavigation(event, '#community')">Community</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">Beyond Code</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                I'm Dhvani, a Computer Science student who loves building reliable software—
+                and also lifting heavy, caring for plants, and helping other students find their footing.
+            </p>
+        </div>
+    </section>
+
+    <!-- Fitness Section -->
+    <section id="fitness" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center mb-12">
+                <div class="w-12 h-12 bg-gym rounded-full flex items-center justify-center mr-4">
+                    <i class="fas fa-dumbbell text-white text-xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-900">Strength Training & Discipline</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-600 mb-6">
+                        The gym is where I practice the same mindset I bring to engineering:
+                        consistent effort, incremental progress, and pushing through hard problems.
+                        Lifting has taught me how to structure goals, track progress, and stay patient
+                        with long-term growth—exactly what you need when debugging tricky systems
+                        or learning new technologies.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-bullseye text-gym text-xl mr-3"></i>
+                            <span class="text-gray-700">Goal-driven training and progress tracking</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-heartbeat text-gym text-xl mr-3"></i>
+                            <span class="text-gray-700">Balance between physical and mental wellness</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-gym text-xl mr-3"></i>
+                            <span class="text-gray-700">Time management: classes, work, and training</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://picsum.photos/300/300?random=101" alt="Gym training" class="w-full rounded-lg shadow-lg" loading="lazy">
+                    <img src="https://picsum.photos/300/300?random=102" alt="Weights and equipment" class="w-full rounded-lg shadow-lg" loading="lazy">
+                    <img src="https://picsum.photos/300/300?random=103" alt="Focused workout" class="w-full rounded-lg shadow-lg" loading="lazy">
+                    <img src="https://picsum.photos/300/300?random=104" alt="Gym environment" class="w-full rounded-lg shadow-lg" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plant Corner Section -->
+    <section id="plants" class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center mb-12">
+                <div class="w-12 h-12 bg-plant rounded-full flex items-center justify-center mr-4">
+                    <i class="fas fa-leaf text-white text-xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-900">Plant Corner</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="grid grid-cols-3 gap-4">
+                        <img src="https://picsum.photos/200/300?random=201" alt="Indoor plant" class="w-full rounded-lg shadow-lg" loading="lazy">
+                        <img src="https://picsum.photos/200/300?random=202" alt="Succulent" class="w-full rounded-lg shadow-lg" loading="lazy">
+                        <img src="https://picsum.photos/200/300?random=203" alt="Hanging plant" class="w-full rounded-lg shadow-lg" loading="lazy">
+                        <img src="https://picsum.photos/200/300?random=204" alt="Leaf close-up" class="w-full rounded-lg shadow-lg" loading="lazy">
+                        <img src="https://picsum.photos/200/300?random=205" alt="Desk plants" class="w-full rounded-lg shadow-lg" loading="lazy">
+                        <img src="https://picsum.photos/200/300?random=206" alt="Sunlit plants" class="w-full rounded-lg shadow-lg" loading="lazy">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <p class="text-lg text-gray-600 mb-6">
+                        My plants are my tiny experiments in patience and care. I track their light,
+                        watering, and soil just like I track metrics for a system. I enjoy propagating
+                        new plants, figuring out why something isn't thriving, and tuning little
+                        variables until things are healthy again.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-seedling text-plant text-xl mr-3"></i>
+                            <span class="text-gray-700">Indoor plant collection and propagation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-tint text-plant text-xl mr-3"></i>
+                            <span class="text-gray-700">Experimenting with watering schedules and soil mixes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-book text-plant text-xl mr-3"></i>
+                            <span class="text-gray-700">Applying observation and iteration—just like debugging</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-white rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">A Few Favorites</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-plant mr-2"></i>
+                                <span>Monstera</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-plant mr-2"></i>
+                                <span>Snake Plant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-plant mr-2"></i>
+                                <span>Pothos</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-plant mr-2"></i>
+                                <span>Succulent mixes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Leadership Section -->
+    <section id="community" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Community, Mentoring & Being an International Student</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                As an international student, I've spent a lot of time helping others navigate the same transition—
+                from orientation to finding community in CS. My leadership roles let me combine communication,
+                empathy, and organization with my technical side.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <i class="fas fa-users text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Digital Women</h3>
+                    <p class="text-gray-600 text-sm">
+                        Peer-Mentor Leader helping CS/SE women connect with resources, peers, and industry.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <i class="fas fa-globe text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">ISSO Orientation Leader</h3>
+                    <p class="text-gray-600 text-sm">
+                        Guided new international students through life at Iowa State and answered questions on academics and daily life.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <i class="fas fa-chalkboard-teacher text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Teaching & TA Work</h3>
+                    <p class="text-gray-600 text-sm">
+                        From Mastermind Institute to COM S 311 TA, I enjoy breaking down complex topics into approachable steps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connection Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">How This Connects Back to Engineering</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                Lifting builds discipline. Plants build patience. Community work builds communication and empathy.
+                All three show up when I'm writing tests, debugging, or collaborating on a project.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <i class="fas fa-project-diagram text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Systems Thinking</h3>
+                    <p class="text-gray-600">
+                        Whether it's a training plan, a care schedule, or a codebase, I think in terms of feedback loops,
+                        constraints, and tradeoffs.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <i class="fas fa-hand-holding-heart text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Reliability & Care</h3>
+                    <p class="text-gray-600">
+                        Plants and people both need consistency. I aim for the same reliability in the systems I build and maintain.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <a href="index.html" class="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-secondary transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Dhvani Mistry</h3>
+                    <p class="text-gray-400">Computer Science Student • Iowa State University</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/DhvaniMistry" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:dhvanimm@iastate.edu" class="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dhvani Mistry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for on-page links
+        function handleNavigation(event, target) {
+            event.preventDefault();
+            if (target.startsWith("#")) {
+                const element = document.querySelector(target);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        }
+
+        // Mobile menu toggle
+        document.addEventListener("DOMContentLoaded", function() {
+            const mobileMenuButton = document.getElementById("mobileMenuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener("click", function() {
+                    mobileMenu.classList.toggle("hidden");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
