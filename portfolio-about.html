@@ -102,33 +102,38 @@
   <!-- Fitness Section -->
   <section id="fitness" class="py-20 bg-base">
     <div class="container mx-auto px-4">
+
+      <!-- Title row -->
       <div class="flex items-center mb-8">
-        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shadow-soft
-                    bg-primary/90">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shadow-soft bg-secondary/90">
           <i class="fas fa-dumbbell text-base text-xl"></i>
         </div>
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold text-accent">
-            Strength Training &amp; Intramural Sports
-          </h2>
-          <p class="text-textSoft mt-2 max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-accent">
+          Strength Training & Intramural Sports
+        </h2>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+        <!-- LEFT: Text content -->
+        <div class="space-y-6">
+
+          <p class="text-textSoft text-sm max-w-xl">
             The gym and intramural volleyball are where I practice consistency, discipline,
             and teamwork—the same habits I lean on when debugging stubborn issues or working
             in an engineering team.
           </p>
-        </div>
-      </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="text-lg text-textSoft mb-6">
+          <p class="text-textSoft text-sm max-w-xl">
             I like setting realistic goals, tracking progress, and celebrating small wins—
             whether that's adding a bit more weight, playing a tighter game with my team,
             or finally landing a tricky feature without regressions.
           </p>
-          <ul class="space-y-3 text-sm md:text-base">
+
+          <ul class="space-y-3 text-sm max-w-xl">
             <li class="flex items-start gap-3">
-              <i class="fas fa-bullseye text-white mt-1.5"></i>
+              <i class="fas fa-bullseye text-secondary mt-1.5"></i>
               <span>Goal-oriented training with a focus on long-term progress.</span>
             </li>
             <li class="flex items-start gap-3">
@@ -140,74 +145,148 @@
               <span>Balancing classes, internships, TA work, and training forces me to manage time intentionally.</span>
             </li>
           </ul>
+
         </div>
 
-        <!-- Fitness photos -->
-        <div class="grid grid-cols-2 gap-4">
-          <img src="photos/sport1.JPG" alt="Intramural volleyball championship"
-               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
-          <img src="photos/sport2.jpg" alt="Gym photo"
-               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        <!-- RIGHT: Image or image grid -->
+        <div class="grid grid-cols-1 gap-4">
+          <div class="bg-surface rounded-xl overflow-hidden shadow-soft">
+            <div class="aspect-[4/3]">
+              <img src="photos/sport1.JPG"
+                  alt="Intramural volleyball championship"
+                  class="w-full h-full object-cover"
+                  loading="lazy">
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
+
   <!-- Plant Corner Section -->
   <section id="plants" class="py-20 bg-surface">
     <div class="container mx-auto px-4">
-      <div class="flex items-center mb-8">
+      <!-- Title row -->
+      <div class="flex items-center mb-4">
         <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shadow-soft
                     bg-secondary/90">
           <i class="fas fa-leaf text-base text-xl"></i>
         </div>
         <div>
           <h2 class="text-3xl md:text-4xl font-bold text-accent">Plant Corner</h2>
-          <p class="text-textSoft mt-2 max-w-2xl">
-            My plants are tiny systems I get to care for. I experiment with light, watering,
-            and repotting the same way I experiment with metrics, logs, and configuration in code.
-          </p>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <div class="order-2 lg:order-1">
-          <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
-            <img src="photos/Plant1.JPG" alt="Plant on desk"
-                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
-            <img src="photos/Plant2.JPG" alt="Plants near window"
-                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
-            <img src="photos/Plant3.JPG" alt="Bouquet or plant close up"
-                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
-            <img src="photos/Plant4.jpg" alt="Plant in cozy corner"
-                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+      <!-- Intro text block -->
+      <p class="text-textSoft text-sm mb-4 max-w-3xl">
+        My plants are tiny systems I get to care for. I experiment with light, watering,
+        and repotting the same way I experiment with metrics, logs, and configuration in code.
+      </p>
+
+      <p class="text-textSoft text-sm mb-6 max-w-3xl">
+        Keeping plants alive (and happy) keeps me observant. If something looks off,
+        I try to hypothesize, adjust one variable, and wait to see results—a nice mirror
+        of debugging and performance tuning.
+      </p>
+
+      <!-- Bullet list -->
+      <div class="space-y-3 text-sm mb-8 max-w-3xl">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-seedling text-secondary mt-1.5"></i>
+          <span>Indoor plant collection, propagation experiments, and a growing wish list.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fas fa-tint text-secondary mt-1.5"></i>
+          <span>Learning how different plants respond to watering schedules and soil mixes.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fas fa-book text-secondary mt-1.5"></i>
+          <span>Observation → hypothesis → small changes → results. Same loop as debugging.</span>
+        </div>
+      </div>
+
+      <!-- Album grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant1.JPG"
+                alt="Plant on desk"
+                class="w-full h-full object-cover"
+                loading="lazy">
+          </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant2.JPG"
+                alt="Plants near window"
+                class="w-full h-full object-cover"
+                loading="lazy">
+          </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant3.JPG"
+                alt="Bouquet or plant close up"
+                class="w-full h-full object-cover"
+                loading="lazy">
+          </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant4.jpg"
+                alt="Plant in cozy corner"
+                class="w-full h-full object-cover"
+                loading="lazy">
+          </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant9.jpeg"
+                alt="Plant in cozy corner"
+                class="w-full h-full object-cover"
+                loading="lazy">
+          </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant6.jpg"
+                alt="Plant in cozy corner"
+                class="w-full h-full object-cover"
+                loading="lazy">
+          </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant7.JPG"
+                alt="Plant in cozy corner"
+                class="w-full h-full object-cover"
+                loading="lazy">
+              </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant8.jpg"
+                alt="Plant in cozy corner"
+                class="w-full h-full object-cover"
+                loading="lazy">
+            </div>
+        </div>
+        <div class="bg-base rounded-xl overflow-hidden shadow-soft">
+          <div class="aspect-[1/1]">
+            <img src="photos/Plant5.JPG"
+                alt="Plant in cozy corner"
+                class="w-full h-full object-cover"
+                loading="lazy">
           </div>
         </div>
 
-        <div class="order-1 lg:order-2">
-          <p class="text-lg text-textSoft mb-6">
-            Keeping plants alive (and happy) keeps me observant. If something looks off,
-            I try to hypothesize, adjust one variable, and wait to see results—a nice mirror
-            of debugging and performance tuning.
-          </p>
-          <div class="space-y-3 text-sm md:text-base">
-            <div class="flex items-start gap-3">
-              <i class="fas fa-seedling text-secondary mt-1.5"></i>
-              <span>Indoor plant collection, propagation experiments, and a growing wish list.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fas fa-tint text-secondary mt-1.5"></i>
-              <span>Learning how different plants respond to watering schedules and soil mixes.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fas fa-book text-secondary mt-1.5"></i>
-              <span>Observation → hypothesis → small changes → results. Same loop as debugging.</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- Community, Work, Trips & Everyday Life -->
   <section id="community" class="py-20 bg-base">
@@ -279,11 +358,10 @@
 
 
       <!-- CDS Global internship / Work Section -->
-      <!-- CDS Global internship / Work Section -->
       <div class="mb-14">
         <div class="flex items-center mb-5">
           <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
-                      bg-primary/80 shadow-soft">
+                      bg-secondary/80 shadow-soft">
             <i class="fas fa-briefcase text-base text-sm"></i>
           </div>
           <div>
@@ -407,27 +485,22 @@
       </div>
 
 
-      <!-- Food, Dog & Everyday Joy -->
+      <!-- Dog & Everyday Joy -->
       <div class="mb-6">
         <div class="flex items-center mb-5">
           <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
-                      bg-accent/80 shadow-soft">
+                      bg-secondary/80 shadow-soft">
             <i class="fas fa-heart text-base text-sm"></i>
           </div>
           <div>
             <h3 class="text-2xl font-semibold text-primary">
-              Food, Dog &amp; Everyday Joy
+              Animal Gallery
             </h3>
-            <p class="text-textSoft text-sm mt-1">
-              I love cooking, trying new food, and spending time with my dog and friends.
-              These are the moments that recharge me between problem sets and pull requests.
-            </p>
           </div>
         </div>
 
         <!-- Dog row -->
-        <h4 class="text-sm uppercase tracking-wide text-textSoft mb-2">My Dog</h4>
-
+        <h4 class="text-sm uppercase tracking-wide text-textSoft mb-2">Animal Gallery</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 
           <div class="bg-surface rounded-xl overflow-hidden shadow-soft">
@@ -474,7 +547,7 @@
           <!-- Add more dog images here -->
           <div class="bg-surface rounded-xl overflow-hidden shadow-soft">
             <div class="aspect-[4/3]">
-              <img src="photos/dog4.jpg"
+              <img src="photos/dog4.png"
                   alt="Another cute dog picture"
                   class="w-full h-full object-cover">
             </div>
@@ -498,10 +571,25 @@
             </div>
           </div>
         </div>
+        </div>
 
+        <div class="mb-6">
+          <div class="flex items-center mb-5">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
+                        bg-secondary/80 shadow-soft">
+            <i class="fas fa-utensils text-base text-sm"></i>
 
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-primary">
+                Cooking &amp; food
+              </h3>
+            </div>
+          </div>
         <!-- Food row -->
-        <h4 class="text-sm uppercase tracking-wide text-textSoft mb-2">Cooking &amp; food</h4>
+        <h4 class="text-sm uppercase tracking-wide text-textSoft mb-2">I treat cooking a lot like engineering: experiment, taste, adjust, repeat. Sometimes it’s
+          a new recipe, sometimes it’s comfort food between deadlines—but it’s almost always shared
+          with other people. I love to cook, and if we ever get to meet I promise to get you a box!</h4>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-2">
           <img src="photos/Food1.jpg" alt="Home-cooked dish"
                class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
@@ -517,7 +605,7 @@
                class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
         </div>
       </div>
-
+      </div>
     </div>
   </section>
 
