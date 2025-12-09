@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <base target="_self">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Dhvani Mistry</title>
+  <meta name="description"
+        content="Beyond code – Dhvani Mistry's life in strength training, plants, community work, cooking, travel, and more." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Rose gold + soft green dark-mode config -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            /* Rose Gold & Soft Green – Dark Mode */
+            base: "#1C1C1E",        // main background (charcoal)
+            surface: "#2A2A2D",     // cards/sections
+
+            primary: "#D7A7A0",     // rose gold
+            secondary: "#A8C3A0",   // soft sage green
+            accent: "#E9CFCB",      // soft blush / highlight
+
+            deepGreen: "#7B9B77",   // moss green accent
+
+            textMain: "#FAF9F8",    // main text
+            textSoft: "#C9C9C9"     // muted paragraph text
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 18px 45px rgba(0,0,0,0.35)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-base font-sans text-textMain">
+  <!-- Navigation -->
+  <header class="bg-surface/95 border-b border-surface/80 backdrop-blur sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Brand links back to main portfolio -->
+        <a href="index.html"
+           class="text-2xl font-bold text-primary hover:text-accent transition-colors">
+          Dhvani Mistry
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="index.html#home" class="nav-link">Portfolio</a>
+          <a href="#fitness" class="nav-link" onclick="handleNavigation(event, '#fitness')">Fitness</a>
+          <a href="#plants" class="nav-link" onclick="handleNavigation(event, '#plants')">Plant Corner</a>
+          <a href="#community" class="nav-link" onclick="handleNavigation(event, '#community')">Community</a>
+        </div>
+        <button class="md:hidden text-textSoft" id="mobileMenuToggle" aria-label="Open menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile nav -->
+      <div id="mobileMenu" class="md:hidden hidden pt-3 space-y-2 text-sm">
+        <a href="index.html#home"
+           class="block px-2 py-2 rounded hover:bg-surface/80 nav-link">Portfolio</a>
+        <a href="#fitness"
+           class="block px-2 py-2 rounded hover:bg-surface/80 nav-link"
+           onclick="handleNavigation(event, '#fitness')">Fitness</a>
+        <a href="#plants"
+           class="block px-2 py-2 rounded hover:bg-surface/80 nav-link"
+           onclick="handleNavigation(event, '#plants')">Plant Corner</a>
+        <a href="#community"
+           class="block px-2 py-2 rounded hover:bg-surface/80 nav-link"
+           onclick="handleNavigation(event, '#community')">Community</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-b from-base via-surface to-deepGreen/40">
+    <div class="container mx-auto px-4 text-center max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-accent">
+        Beyond Code
+      </h1>
+      <p class="text-lg md:text-xl text-textSoft">
+        There’s more to me than terminals and test suites. This page is a little snapshot
+        of what keeps me grounded and excited outside of pure engineering: lifting, plants,
+        community work, good food, travel, and a very cute dog.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fitness Section -->
+  <section id="fitness" class="py-20 bg-base">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center mb-8">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shadow-soft
+                    bg-primary/90">
+          <i class="fas fa-dumbbell text-base text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-accent">
+            Strength Training &amp; Intramural Sports
+          </h2>
+          <p class="text-textSoft mt-2 max-w-2xl">
+            The gym and intramural volleyball are where I practice consistency, discipline,
+            and teamwork—the same habits I lean on when debugging stubborn issues or working
+            in an engineering team.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-lg text-textSoft mb-6">
+            I like setting realistic goals, tracking progress, and celebrating small wins—
+            whether that's adding a bit more weight, playing a tighter game with my team,
+            or finally landing a tricky feature without regressions.
+          </p>
+          <ul class="space-y-3 text-sm md:text-base">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-bullseye text-secondary mt-1.5"></i>
+              <span>Goal-oriented training with a focus on long-term progress.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-users text-secondary mt-1.5"></i>
+              <span>Intramural volleyball has taught me how to communicate quickly and trust my team.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-secondary mt-1.5"></i>
+              <span>Balancing classes, internships, TA work, and training forces me to manage time intentionally.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fitness photos -->
+        <div class="grid grid-cols-2 gap-4">
+          <img src="photos/sport1.JPG" alt="Intramural volleyball championship"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/sport2.jpeg" alt="Gym photo"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plant Corner Section -->
+  <section id="plants" class="py-20 bg-surface">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center mb-8">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 shadow-soft
+                    bg-secondary/90">
+          <i class="fas fa-leaf text-base text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-accent">Plant Corner</h2>
+          <p class="text-textSoft mt-2 max-w-2xl">
+            My plants are tiny systems I get to care for. I experiment with light, watering,
+            and repotting the same way I experiment with metrics, logs, and configuration in code.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
+            <img src="photos/Plant1.JPG" alt="Plant on desk"
+                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+            <img src="photos/Plant2.JPG" alt="Plants near window"
+                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+            <img src="photos/Plant3.JPG" alt="Bouquet or plant close up"
+                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+            <img src="photos/Plant4.jpg" alt="Plant in cozy corner"
+                 class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <p class="text-lg text-textSoft mb-6">
+            Keeping plants alive (and happy) keeps me observant. If something looks off,
+            I try to hypothesize, adjust one variable, and wait to see results—a nice mirror
+            of debugging and performance tuning.
+          </p>
+          <div class="space-y-3 text-sm md:text-base">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-seedling text-secondary mt-1.5"></i>
+              <span>Indoor plant collection, propagation experiments, and a growing wish list.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-tint text-secondary mt-1.5"></i>
+              <span>Learning how different plants respond to watering schedules and soil mixes.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-book text-secondary mt-1.5"></i>
+              <span>Observation → hypothesis → small changes → results. Same loop as debugging.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community, Work, Trips & Everyday Life -->
+  <section id="community" class="py-20 bg-base">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-accent mb-3">
+          Community, Work &amp; Life Moments
+        </h2>
+        <p class="text-lg text-textSoft">
+          A lot of who I am comes from the people around me—students I mentor, teams I work with,
+          conferences I attend, and friends I cook and explore with.
+        </p>
+      </div>
+
+      <!-- ISSO / Community Section -->
+      <div class="mb-14">
+        <div class="flex items-center mb-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
+                      bg-secondary/80 shadow-soft">
+            <i class="fas fa-globe text-base text-sm"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-primary">
+              International Student Orientation (ISSO)
+            </h3>
+            <p class="text-textSoft text-sm mt-1">
+              Helping new international students find community and feel at home at Iowa State.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <img src="photos/ISSO1.png" alt="ISSO group photo 1"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/ISSO2.JPG" alt="ISSO event photo"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/ISSO3.JPG" alt="ISSO group photo 2"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/ISSO4.jpg" alt="ISSO orientation moment"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        </div>
+      </div>
+
+      <!-- CDS Global internship / Work Section -->
+      <div class="mb-14">
+        <div class="flex items-center mb-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
+                      bg-primary/80 shadow-soft">
+            <i class="fas fa-briefcase text-base text-sm"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-primary">
+              CDS Global Internship – Service Layer Team
+            </h3>
+            <p class="text-textSoft text-sm mt-1">
+              Some snapshots from my time working on file-processing pipelines, debugging production
+              issues, and getting to know the team outside of Jira tickets.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <img src="photos/work1.jpg" alt="CDS Global team hallway photo"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/work2.jpeg" alt="CDS Global team dinner or outing"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/work3.jpeg" alt="CDS Global colleagues at restaurant"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/work4.jpeg" alt="CDS Global group photo in evening"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Grace Hopper Trip / Chicago Section -->
+      <div class="mb-14">
+        <div class="flex items-center mb-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
+                      bg-deepGreen/80 shadow-soft">
+            <i class="fas fa-city text-base text-sm"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-primary">
+              Grace Hopper Celebration Trip – Chicago
+            </h3>
+            <p class="text-textSoft text-sm mt-1">
+              Recent trip to Chicago for Grace Hopper’s conference—talks, networking,
+              city views, and a lot of inspiration.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <img src="photos/RT1.jpeg" alt="Conference group photo"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/RT2.jpeg" alt="Concert or event photo"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/RT3.jpeg" alt="Grace Hopper group"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/RT4.DNG" alt="Chicago skyline at night"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/RT5.jpeg" alt="Chicago cityscape"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/RT6.jpeg" alt="Group dinner or hangout"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Food, Dog & Everyday Joy -->
+      <div class="mb-6">
+        <div class="flex items-center mb-5">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3
+                      bg-accent/80 shadow-soft">
+            <i class="fas fa-heart text-base text-sm"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-primary">
+              Food, Dog &amp; Everyday Joy
+            </h3>
+            <p class="text-textSoft text-sm mt-1">
+              I love cooking, trying new food, and spending time with my dog and friends.
+              These are the moments that recharge me between problem sets and pull requests.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dog row -->
+        <h4 class="text-sm uppercase tracking-wide text-textSoft mb-2">My dog</h4>
+        <div class="grid grid-cols-3 md:grid-cols-3 gap-3 mb-6">
+          <img src="photos/dog1.jpg" alt="Dog on the grass"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/dog2.jpeg" alt="Dog close-up"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/dog3.jpeg" alt="Dog posing on grass"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        </div>
+
+        <!-- Food row -->
+        <h4 class="text-sm uppercase tracking-wide text-textSoft mb-2">Cooking &amp; food</h4>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-2">
+          <img src="photos/Food1.jpg" alt="Home-cooked dish"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/Food2.jpeg" alt="Meal in a pot"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/Food3.jpeg" alt="Food spread on table"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/Food4.DNG" alt="Dessert or baked item"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="photos/Food5.DNG" alt="Assorted dishes"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+          <img src="Food6.DNG" alt="Food tray close-up"
+               class="w-full rounded-lg shadow-soft object-cover" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Connection Section -->
+  <section class="py-20 bg-surface">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-accent mb-6">
+        How This Connects Back to Engineering
+      </h2>
+      <p class="text-lg text-textSoft max-w-2xl mx-auto mb-8">
+        Strength training keeps me disciplined. Plants keep me patient. Orientation work, internships,
+        and conferences keep me connected to people and the bigger picture. All of that informs
+        how I show up as a teammate and engineer.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+        <div class="bg-base/80 rounded-xl p-6 border border-primary/25 shadow-soft">
+          <i class="fas fa-project-diagram text-secondary text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-accent mb-2">Systems Thinking</h3>
+          <p class="text-textSoft">
+            Whether it’s a training plan, a care schedule, or a codebase, I think in terms of inputs,
+            feedback loops, constraints, and tradeoffs.
+          </p>
+        </div>
+        <div class="bg-base/80 rounded-xl p-6 border border-primary/25 shadow-soft">
+          <i class="fas fa-hand-holding-heart text-primary text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-accent mb-2">Reliability &amp; Care</h3>
+          <p class="text-textSoft">
+            Plants, people, and production systems all need consistent attention. I try to bring
+            that reliability to the work I do and the teams I’m part of.
+          </p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a href="index.html"
+           class="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-base font-semibold
+                  hover:bg-accent hover:text-base transition-colors shadow-soft">
+          <i class="fas fa-arrow-left mr-2"></i>
+          Back to Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-base border-t border-surface/80 text-textMain py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <h3 class="text-2xl font-bold mb-2 text-accent">Dhvani Mistry</h3>
+          <p class="text-textSoft">Computer Science Student • Iowa State University</p>
+        </div>
+        <div class="flex space-x-6 text-textSoft">
+          <a href="https://www.linkedin.com/" target="_blank"
+             class="hover:text-accent transition-colors" aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="https://github.com/DhvaniMistry" target="_blank"
+             class="hover:text-accent transition-colors" aria-label="GitHub">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="mailto:dhvanimm@iastate.edu"
+             class="hover:text-accent transition-colors" aria-label="Email">
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 text-center text-textSoft text-xs">
+        <p>&copy; 2025 Dhvani Mistry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for on-page links
+    function handleNavigation(event, target) {
+      event.preventDefault();
+      if (target.startsWith("#")) {
+        const element = document.querySelector(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+
+    // Mobile menu toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenuButton = document.getElementById("mobileMenuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    });
+  </script>
+
+  <style>
+    .nav-link {
+      @apply text-textSoft hover:text-accent transition-colors;
+    }
+  </style>
+</body>
+</html>

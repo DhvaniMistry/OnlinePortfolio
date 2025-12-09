@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <base target="_self">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhvani Mistry - Computer Science Portfolio</title>
+  <meta name="description" content="Portfolio of Dhvani Mistry, Senior Computer Science Student at Iowa State University specializing in software engineering, systems, and data-driven projects." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!-- Tailwind theme: forest green + warm brown, dark mode -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1F4E45",   // deep green
+            secondary: "#4D7973", // teal accent
+            accent: "#B06A4D",    // clay red
+            highlight: "#915B3C", // warm brown
+            surface: "#1A1D1B",   // card background
+            base: "#0D0F0E",      // page background
+            neutral: "#CFB79F",   // sand neutral
+            textMain: "#F1F1F1",
+            textSoft: "#C8C8C8"
+          },
+          fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          boxShadow: {
+            soft: "0 18px 45px rgba(0,0,0,0.55)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+</head>
+<body class="min-h-screen bg-base font-sans text-textMain">
+
+  <!-- Navigation -->
+  <header class="bg-surface/90 backdrop-blur border-b border-[#29302E] sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-2" onclick="handleNavigation(event, '#home')">
+          <span class="w-9 h-9 rounded-full bg-primary/30 flex items-center justify-center">
+            <span class="font-bold text-neutral text-lg">D</span>
+          </span>
+          <span class="text-xl font-semibold tracking-tight">Dhvani Mistry</span>
+        </a>
+
+        <button id="mobileToggle" class="md:hidden text-textSoft" aria-label="Open menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+
+        <div id="menu" class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#home" class="nav-link" onclick="handleNavigation(event, '#home')">Home</a>
+          <a href="#education" class="nav-link" onclick="handleNavigation(event, '#education')">Education</a>
+          <a href="#experience" class="nav-link" onclick="handleNavigation(event, '#experience')">Experience</a>
+          <a href="#projects" class="nav-link" onclick="handleNavigation(event, '#projects')">Projects</a>
+          <a href="#skills" class="nav-link" onclick="handleNavigation(event, '#skills')">Skills</a>
+          <a href="portfolio-about.html" class="nav-link">About Me</a>
+          <a href="#contact" class="nav-link" onclick="handleNavigation(event, '#contact')">Contact</a>
+        </div>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <div id="mobileMenu" class="md:hidden hidden pt-3 space-y-2 text-sm">
+        <a href="#home" class="block px-2 py-2 rounded hover:bg-surface/70" onclick="handleNavigation(event, '#home')">Home</a>
+        <a href="#education" class="block px-2 py-2 rounded hover:bg-surface/70" onclick="handleNavigation(event, '#education')">Education</a>
+        <a href="#experience" class="block px-2 py-2 rounded hover:bg-surface/70" onclick="handleNavigation(event, '#experience')">Experience</a>
+        <a href="#projects" class="block px-2 py-2 rounded hover:bg-surface/70" onclick="handleNavigation(event, '#projects')">Projects</a>
+        <a href="#skills" class="block px-2 py-2 rounded hover:bg-surface/70" onclick="handleNavigation(event, '#skills')">Skills</a>
+        <a href="portfolio-about.html" class="block px-2 py-2 rounded hover:bg-surface/70">About Me</a>
+        <a href="#contact" class="block px-2 py-2 rounded hover:bg-surface/70" onclick="handleNavigation(event, '#contact')">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="py-16 md:py-20 bg-gradient-to-br from-[#0D0F0E] via-[#1F4E45] to-[#4D7973]">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-10 md:grid-cols-[3fr,2fr] items-center max-w-6xl mx-auto">
+        <div>
+          <div class="inline-flex items-center px-3 py-1 mb-4 rounded-full bg-surface/80 border border-secondary/40 text-xs font-medium text-neutral shadow-soft">
+            <span class="w-2 h-2 rounded-full bg-accent mr-2"></span>
+            Open to Software Engineering Roles & New Grad roles
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+            Hi, I'm Dhvani.
+          </h1>
+
+          <p class="text-lg md:text-xl text-textSoft mb-6">
+            Senior Computer Science student at Iowa State University who loves building reliable systems,
+            debugging gnarly edge cases, and turning vague requirements into clean, testable code.
+          </p>
+
+          <p class="text-base md:text-lg text-textSoft mb-8">
+            I’ve worked across backend file-processing pipelines, observability tools, dashboards, and
+            simulation/game projects in C++, Java, and Python. I care about correctness, clarity, and good
+            developer experience.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <a href="#projects" onclick="handleNavigation(event, '#projects')" class="inline-flex items-center justify-center bg-accent text-white px-6 py-3 rounded-lg hover:bg-highlight transition-colors font-semibold text-sm shadow-soft">
+              <i class="fas fa-code mr-2"></i>
+              View Projects
+            </a>
+            <a href="DhvaniMistry_Resume.pdf" class="inline-flex items-center justify-center border border-accent text-neutral px-6 py-3 rounded-lg hover:bg-accent hover:text-white transition-colors font-semibold text-sm">
+              <i class="fas fa-file-alt mr-2"></i>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-textSoft">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center shadow-soft">
+                <i class="fas fa-python text-secondary"></i>
+              </span>
+              <div>
+                <p class="font-semibold textMain">Languages</p>
+                <p>Python, Java, C++, JS/TS</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center shadow-soft">
+                <i class="fas fa-server text-secondary"></i>
+              </span>
+              <div>
+                <p class="font-semibold textMain">Back-end</p>
+                <p>APIs, file I/O, AWS</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center shadow-soft">
+                <i class="fas fa-clipboard-check text-secondary"></i>
+              </span>
+              <div>
+                <p class="font-semibold textMain">Practices</p>
+                <p>Testing, CI/CD, reviews</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- "Profile card" column -->
+        <div class="relative">
+          <div class="relative bg-surface rounded-3xl shadow-soft p-6 border border-[#29302E]">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-3xl font-bold">
+                D
+              </div>
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold text-primary">
+                  Iowa State University — B.S. in Computer Science
+                </h3>
+                <p class="text-sm text-neutral">
+                  Ames, Iowa • Anticipated May 2026 • GPA: 3.52
+                </p>
+                
+              </div>
+              
+              
+            </div>
+
+            <div class="space-y-3 text-sm text-textSoft">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-briefcase text-secondary mt-1.5"></i>
+                <p><span class="font-semibold textMain">Software Engineering Intern</span> at CDS Global (file-processing pipelines, AWS, Python).</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-laptop-code text-secondary mt-1.5"></i>
+                <p>Previous experience at Crest Data Systems building Splunk apps and data integrations.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-user-friends text-secondary mt-1.5"></i>
+                <p>TA for COM S 311 and active in Digital Women & international student orientation.</p>
+              </div>
+            </div>
+
+            <div class="mt-5 flex items-center justify-between text-xs text-textSoft border-t border-[#29302E] pt-3">
+              <span>Based in Ames, Iowa</span>
+              <div class="flex gap-3">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="hover:text-neutral">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/DhvaniMistry" target="_blank" aria-label="GitHub" class="hover:text-neutral">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:dhvanimm@iastate.edu" aria-label="Email" class="hover:text-neutral">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- decorative blobs -->
+          <div class="absolute -top-6 -right-4 w-16 h-16 rounded-full bg-primary/40 blur-xl"></div>
+          <div class="absolute -bottom-8 -left-8 w-24 h-24 rounded-full bg-highlight/30 blur-2xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-16 bg-base">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center justify-between mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold">Education</h2>
+          <span class="text-xs md:text-sm text-textSoft bg-surface px-3 py-1 rounded-full border border-[#29302E]">
+            Strong foundation in algorithms, systems, and software engineering
+          </span>
+        </div>
+
+        <div class="bg-surface rounded-2xl p-6 md:p-8 border border-[#29302E] shadow-soft">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+            <div>
+              <h3 class="text-xl md:text-2xl font-semibold">
+                Iowa State University — B.S. in Computer Science
+              </h3>
+              <p class="text-sm text-primary">
+                Ames, Iowa • Anticipated May 2026 • GPA: 3.52
+              </p>
+              
+            </div>
+            <span class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-highlight/25 text-neutral font-medium">
+              <i class="fas fa-graduation-cap mr-1"></i>
+              Senior
+            </span>
+          </div>
+
+          <h4 class="text-sm font-semibold text-neutral uppercase tracking-wide mb-3">Selected Coursework</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-textSoft">
+            <ul class="space-y-1.5">
+              <li>COM S 127: Introduction to Programming (Python)</li>
+              <li>COM S 227: Object-Oriented Programming</li>
+              <li>COM S 228: Introduction to Data Structures</li>
+              <li>COM S 230: Discrete Computational Structures</li>
+              <li>COM S 309: Software Development Practices</li>
+              <li>COM S 311: Design and Analysis of Algorithms</li>
+              <li>COM S 319: User Interfaces</li>
+              <li>COM S 321: Computer Architecture & Machine-Level Programming</li>
+            </ul>
+            <ul class="space-y-1.5">
+              <li>COM S 327: Advanced Programming Techniques</li>
+              <li>COM S 331: Theory of Computing</li>
+              <li>COM S 342: Principles of Programming Languages</li>
+              <li>COM S 352: Introduction to Operating Systems</li>
+              <li>COM S 363: Database Management Systems</li>
+              <li>COM S 409: Software Requirements Engineering</li>
+              <li>COM S 417: Software Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16 bg-surface">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
+        <p class="text-textSoft mb-10 max-w-2xl">
+          Internships and roles where I’ve built and debugged real systems, supported students,
+          and worked directly with users and teams.
+        </p>
+
+        <div class="space-y-6 text-sm md:text-[0.95rem] text-textSoft">
+          <!-- CDS Global -->
+          <article class="border-b border-[#29302E] pb-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <div>
+                <h3 class="font-semibold textMain">
+                  Software Engineering Intern — Service Layer Team
+                </h3>
+                <p>CDS Global • Des Moines, Iowa</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs">May 2025 – Present</p>
+                <p class="text-[0.7rem] text-secondary uppercase tracking-wide">
+                  Python · AWS · File Processing
+                </p>
+              </div>
+            </div>
+            <ul class="mt-2 list-disc pl-5 space-y-1.5">
+              <li>Delivered 12+ improvements across file processing, billing, and shipping workflows.</li>
+              <li>Restructured Omnistream file grouping/naming based on mail receive dates to improve accuracy and reporting.</li>
+              <li>Optimized large file streaming for memory efficiency and reliability.</li>
+              <li>Fixed critical defects (blank payment tags, international address formats, misnamed/misplaced campaign files), reducing downstream issues.</li>
+              <li>Aligned test and production environments to improve developer experience and reduce configuration drift.</li>
+              <li>Added flexible file-type support and folder structures to streamline warehouse inventory integration.</li>
+            </ul>
+            <p class="mt-2 text-xs text-textSoft">
+              <span class="font-semibold text-neutral">Tech:</span> Python, Pydantic, Pytest, SQL, AWS (S3, EC2), Git, CI/CD, file I/O, debugging/profiling
+            </p>
+          </article>
+
+          <!-- Crest Data Systems -->
+          <article class="border-b border-[#29302E] pb-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <div>
+                <h3 class="font-semibold textMain">
+                  Software Engineer Intern
+                </h3>
+                <p>Crest Data Systems • San Jose, California (Remote)</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs">May 2024 – Aug 2024</p>
+                <p class="text-[0.7rem] text-neutral uppercase tracking-wide">
+                  Python · Splunk · Observability
+                </p>
+              </div>
+            </div>
+            <ul class="mt-2 list-disc pl-5 space-y-1.5">
+              <li>Built Splunk dashboards and applications for log monitoring with scripted and modular inputs.</li>
+              <li>Developed Python integrations to ingest data via REST APIs using checkpointing to prevent duplicates and loss.</li>
+              <li>Configured <code>inputs.conf</code>, <code>props.conf</code>, <code>transforms.conf</code>; authored searches with <code>stats</code>, <code>eval</code>, <code>table</code>.</li>
+              <li>Maintained code quality with Black, flake8, isort; managed environments with Poetry and pyenv.</li>
+            </ul>
+            <p class="mt-2 text-xs text-textSoft">
+              <span class="font-semibold text-neutral">Tech:</span> Python (requests, FastAPI), Splunk (apps/add-ons, Dashboard Studio), regex, HTTP
+            </p>
+          </article>
+
+          <!-- TA: COM S 311 -->
+          <article class="border-b border-[#29302E] pb-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <div>
+                <h3 class="font-semibold textMain">
+                  Teaching Assistant — COM S 311: Design and Analysis of Algorithms
+                </h3>
+                <p>Iowa State University · Department of Computer Science</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs">Aug 2024 – May 2025</p>
+                <p class="text-[0.7rem] text-secondary uppercase tracking-wide">
+                  Fall 2024 &amp; Spring 2025
+                </p>
+              </div>
+            </div>
+            <ul class="mt-2 list-disc pl-5 space-y-1.5">
+              <li>Led recitations for 300+ students; held office hours and graded homework and exams.</li>
+              <li>Helped students reason through algorithm design, runtime analysis, and proof-style questions.</li>
+              <li>Explained concepts like asymptotic complexity, greedy vs. DP, and graph algorithms in approachable ways.</li>
+            </ul>
+          </article>
+
+          <!-- TA: COM S 309 -->
+          <article class="border-b border-[#29302E] pb-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <div>
+                <h3 class="font-semibold textMain">
+                  Teaching Assistant — COM S 309: Software Development Practices
+                </h3>
+                <p>Iowa State University · Department of Computer Science</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs">Jan 2025 – May 2025</p>
+                <p class="text-[0.7rem] text-secondary uppercase tracking-wide">
+                  Spring 2025
+                </p>
+              </div>
+            </div>
+            <ul class="mt-2 list-disc pl-5 space-y-1.5">
+              <li>Supported student teams building semester-long software projects with modern tooling and workflows.</li>
+              <li>Answered questions on Git workflows, branching, reviews, and testing expectations.</li>
+              <li>Reviewed design docs and helped teams break down vague requirements into implementable tasks.</li>
+            </ul>
+          </article>
+
+          <!-- Agronomy IT -->
+          <article class="border-b border-[#29302E] pb-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <div>
+                <h3 class="font-semibold textMain">
+                  Student Support Technician
+                </h3>
+                <p>Iowa State University — Agronomy IT · Ames, Iowa</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs">Feb 2023 – May 2024</p>
+              </div>
+            </div>
+            <ul class="mt-2 list-disc pl-5 space-y-1.5">
+              <li>Diagnosed and resolved hardware and software issues for faculty, staff, and students.</li>
+              <li>Installed and maintained systems; wrote support documentation for recurring issues.</li>
+            </ul>
+          </article>
+
+          <!-- Mastermind Institute -->
+          <article>
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <div>
+                <h3 class="font-semibold textMain">
+                  Teaching Assistant
+                </h3>
+                <p>Mastermind Institute · Ahmedabad, Gujarat</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs">Apr 2022 – Jun 2022</p>
+              </div>
+            </div>
+            <ul class="mt-2 list-disc pl-5 space-y-1.5">
+              <li>Taught mathematics and science to high-school students.</li>
+              <li>Created tests, slide decks, and structured practice problems to reinforce concepts.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 bg-base">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold">Projects</h2>
+            <p class="text-textSoft mt-2 max-w-xl">
+              A mix of systems, simulations, games, and web apps that reflect how I think about design,
+              algorithms, and user experience.
+            </p>
+          </div>
+          <p class="text-xs md:text-sm text-textSoft">
+            More details and code available on request or GitHub.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- C++ Dungeon -->
+          <article class="group rounded-2xl overflow-hidden border border-[#29302E] bg-surface hover:border-secondary hover:shadow-soft transition-all">
+            <div class="overflow-hidden">
+              <img
+                src="https://picsum.photos/600/360?random=401"
+                alt="Terminal preview of C++ Dungeon Crawler"
+                class="w-full h-44 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold textMain">C++ Dungeon Crawler</h3>
+                <span class="text-[0.7rem] px-2 py-1 rounded-full bg-primary/40 text-neutral font-medium">
+                  C++ · Ncurses
+                </span>
+              </div>
+
+              <p class="text-sm text-textSoft">
+                A terminal-based roguelike game built in C++ featuring procedurally generated maps,
+                enemy AI, items, and turn-based combat.
+              </p>
+
+              <ul class="list-disc pl-5 text-sm text-textSoft space-y-1">
+                <li>Implemented dungeon generation and enemy movement using BFS/DFS pathfinding.</li>
+                <li>Built modular classes for player, monsters, items, and tiles.</li>
+                <li>Used Ncurses for an interactive TUI with keyboard movement and live status updates.</li>
+                <li>Designed multiple enemy types with different stats and behavior patterns.</li>
+              </ul>
+
+              <a href="https://github.com/DhvaniMistry/Dungeon" target="_blank"
+                 class="inline-flex items-center text-secondary text-sm font-medium hover:text-accent">
+                <i class="fab fa-github mr-2"></i> View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <!-- Java simulations & games -->
+          <article class="group rounded-2xl overflow-hidden border border-[#29302E] bg-surface hover:border-secondary hover:shadow-soft transition-all">
+            <div class="overflow-hidden">
+              <img
+                src="https://picsum.photos/600/360?random=302"
+                alt="Visualization of Java simulations and game logic"
+                class="w-full h-44 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold textMain">Java Simulations & Games</h3>
+                <span class="text-[0.7rem] px-2 py-1 rounded-full bg-highlight/40 text-neutral font-medium">
+                  Java · OOP
+                </span>
+              </div>
+              <p class="text-sm text-textSoft">
+                A collection of Java projects exploring algorithms, simulation, and interactive gameplay.
+              </p>
+              <ul class="list-disc pl-5 text-sm text-textSoft space-y-1">
+                <li>ISP simulation with profit and utilization modeling, plus unit tests.</li>
+                <li>Median point finder implementing selection, insertion, merge, and quicksort.</li>
+                <li>2048-style ConnectGame using callbacks, tile adjacency logic, and event handling.</li>
+                <li>Train-track simulation demonstrating object-oriented design and event flows.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Python games & CLI tools -->
+          <article class="group rounded-2xl overflow-hidden border border-[#29302E] bg-surface hover:border-secondary hover:shadow-soft transition-all">
+            <div class="overflow-hidden">
+              <img
+                src="https://picsum.photos/600/360?random=303"
+                alt="Console view of Python games and CLI tools"
+                class="w-full h-44 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold textMain">Python Games & CLI Tools</h3>
+                <span class="text-[0.7rem] px-2 py-1 rounded-full bg-secondary/40 text-neutral font-medium">
+                  Python
+                </span>
+              </div>
+              <p class="text-sm text-textSoft">
+                Small projects to practice problem solving, data structures, and game mechanics.
+              </p>
+              <ul class="list-disc pl-5 text-sm text-textSoft space-y-1">
+                <li>Text adventure (D&D-inspired) with stochastic combat and inventory.</li>
+                <li>Classic Nim with AI opponent and graphical Tic-Tac-Toe.</li>
+                <li>CLI To-Do list using “lanes” (backlog, doing, done) to track work.</li>
+                <li>Battleship with validated placement, attack resolution, and win detection.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- SoilSentry -->
+          <article class="group rounded-2xl overflow-hidden border border-[#29302E] bg-surface hover:border-secondary hover:shadow-soft transition-all">
+            <div class="overflow-hidden">
+              <img
+                src="https://picsum.photos/600/360?random=402"
+                alt="SoilSentry dashboard preview"
+                class="w-full h-44 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold textMain">SoilSentry — Smart Plant Monitoring</h3>
+                <span class="text-[0.7rem] px-2 py-1 rounded-full bg-primary/40 text-neutral font-medium">
+                  Flask · Raspberry Pi · Tailwind
+                </span>
+              </div>
+
+              <p class="text-sm text-textSoft">
+                A smart plant-care web app that reads real sensor data from a Raspberry Pi to track
+                soil moisture, humidity, and temperature in real time.
+              </p>
+
+              <ul class="list-disc pl-5 text-sm text-textSoft space-y-1">
+                <li>Integrated Raspberry Pi sensors and sent readings to a Flask backend.</li>
+                <li>Displayed live moisture/temperature/humidity charts with responsive UI.</li>
+                <li>Alerted users when plant conditions were outside healthy ranges.</li>
+                <li>Used Tailwind for a clean, lightweight dashboard and smooth UX.</li>
+              </ul>
+
+              <a href="https://github.com/Anish-Chanda/SoilSentry" target="_blank"
+                 class="inline-flex items-center text-secondary text-sm font-medium hover:text-accent">
+                <i class="fab fa-github mr-2"></i> View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <!-- IssueTracker Lite -->
+          <article class="group rounded-2xl overflow-hidden border border-[#29302E] bg-surface hover:border-secondary hover:shadow-soft transition-all">
+            <div class="overflow-hidden">
+              <img
+                src="https://picsum.photos/600/360?random=305"
+                alt="Kanban-style issue tracker interface"
+                class="w-full h-44 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold textMain">IssueTracker Lite</h3>
+                <span class="text-[0.7rem] px-2 py-1 rounded-full bg-highlight/40 text-neutral font-medium">
+                  React · Node.js
+                </span>
+              </div>
+              <p class="text-sm text-textSoft">
+                A lightweight issue tracker inspired by real workflows from COM S 309 and internship projects.
+              </p>
+              <ul class="list-disc pl-5 text-sm text-textSoft space-y-1">
+                <li>Supports tickets with status, assignee, labels, and comments.</li>
+                <li>Kanban-style board with drag-and-drop between columns.</li>
+                <li>Simple REST API backend with JSON-based storage and basic authentication.</li>
+              </ul>
+              <p class="mt-2 text-xs text-textSoft">
+                <span class="font-semibold text-neutral">Focus:</span> CRUD APIs, component structure, and modeling real-world workflows.
+              </p>
+            </div>
+          </article>
+
+          <!-- Cylife -->
+          <article class="group rounded-2xl overflow-hidden border border-[#29302E] bg-surface hover:border-secondary hover:shadow-soft transition-all">
+            <div class="overflow-hidden">
+              <img
+                src="https://picsum.photos/600/360?random=307"
+                alt="Cylife student-community web app"
+                class="w-full h-44 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold textMain">Cylife — Student Community Web App</h3>
+                <span class="text-[0.7rem] px-2 py-1 rounded-full bg-secondary/40 text-neutral font-medium">
+                  Java · Spring Boot · MySQL
+                </span>
+              </div>
+              <p class="text-sm text-textSoft">
+                A student-centric platform for club management, event scheduling, and campus community engagement.
+              </p>
+              <ul class="list-disc pl-5 text-sm text-textSoft space-y-1">
+                <li>Allows students to browse and join clubs, manage memberships, and view upcoming events.</li>
+                <li>Supports role &amp; permission management, club creation requests, and club-specific chat (via WebSockets).</li>
+                <li>Backend built with Spring Boot; database backed by MySQL; full-stack design for campus-wide use.</li>
+              </ul>
+              <a href="https://github.com/DhvaniMistry/Cylife" target="_blank"
+                 class="inline-flex items-center text-secondary text-sm font-medium hover:text-accent">
+                <i class="fab fa-github mr-2"></i> View on GitHub
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 bg-surface">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Technical Skills</h2>
+        <p class="text-textSoft text-center max-w-2xl mx-auto mb-10">
+          I care about being effective with a small, solid toolkit: strong fundamentals, reliable tooling,
+          and good collaboration habits.
+        </p>
+
+        <!-- top grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div class="bg-surface border border-[#29302E] rounded-2xl p-6 shadow-soft">
+            <i class="fas fa-code text-3xl text-secondary mb-4"></i>
+            <h3 class="text-lg font-semibold textMain mb-2">Programming</h3>
+            <p class="text-sm text-textSoft">
+              Python, Java, JavaScript, C++, TypeScript
+            </p>
+          </div>
+          <div class="bg-surface border border-[#29302E] rounded-2xl p-6 shadow-soft">
+            <i class="fas fa-laptop-code text-3xl text-secondary mb-4"></i>
+            <h3 class="text-lg font-semibold textMain mb-2">Web & Back-end</h3>
+            <p class="text-sm text-textSoft">
+              React, Node.js, HTML5, CSS3, Tailwind, REST APIs, file I/O, basic AWS
+            </p>
+          </div>
+          <div class="bg-surface border border-[#29302E] rounded-2xl p-6 shadow-soft">
+            <i class="fas fa-database text-3xl text-secondary mb-4"></i>
+            <h3 class="text-lg font-semibold textMain mb-2">Tools & Platforms</h3>
+            <p class="text-sm text-textSoft">
+              Git, Docker, AWS, MySQL, Splunk, Linux, macOS, Windows
+            </p>
+          </div>
+        </div>
+
+        <!-- bottom grid -->
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-surface rounded-2xl p-5 border border-[#29302E]">
+            <h4 class="font-semibold textMain mb-2 text-sm uppercase tracking-wide">Practices</h4>
+            <p class="text-sm text-textSoft">
+              Unit testing, fixtures/mocking, CI/CD, code review, PEP 8, formatting & linting,
+              incremental refactoring.
+            </p>
+          </div>
+          <div class="bg-surface rounded-2xl p-5 border border-[#29302E]">
+            <h4 class="font-semibold textMain mb-2 text-sm uppercase tracking-wide">Focus Areas</h4>
+            <p class="text-sm text-textSoft">
+              File-processing systems, data pipelines, debugging, systems programming foundations,
+              and developer experience.
+            </p>
+          </div>
+          <div class="bg-surface rounded-2xl p-5 border border-[#29302E]">
+            <h4 class="font-semibold textMain mb-2 text-sm uppercase tracking-wide">Soft Skills</h4>
+            <p class="text-sm text-textSoft">
+              Leadership, mentoring, technical communication, collaboration in mixed-skill teams,
+              and adapting to new environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (no form, just direct info) -->
+  <section id="contact" class="py-16 bg-base">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+          Get In Touch
+        </h2>
+        <p class="text-textSoft text-center mb-10 max-w-2xl mx-auto">
+          If you’d like to talk about an opportunity, a project idea, or just debugging weird bugs
+          and growing plants, feel free to reach out directly.
+        </p>
+
+        <div class="bg-surface text-textMain rounded-2xl p-6 md:p-8 shadow-soft border border-[#29302E]">
+          <div>
+            <h3 class="text-lg font-semibold mb-3">Contact Details</h3>
+            <p class="text-sm text-textSoft mb-4">
+              Email is usually the fastest way to reach me. I’m also active on GitHub and LinkedIn.
+            </p>
+
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-primary/50 flex items-center justify-center">
+                  <i class="fas fa-envelope text-white text-xs"></i>
+                </span>
+                <a href="mailto:dhvanimm@iastate.edu" class="hover:text-neutral break-all">
+                  dhvanimm@iastate.edu
+                </a>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-primary/50 flex items-center justify-center">
+                  <i class="fas fa-phone text-white text-xs"></i>
+                </span>
+                <a href="tel:+16124176657" class="hover:text-neutral">
+                  +1 (612) 417-6657
+                </a>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-primary/50 flex items-center justify-center">
+                  <i class="fab fa-linkedin-in text-white text-xs"></i>
+                </span>
+                <a href="https://www.linkedin.com/" target="_blank" class="hover:text-neutral">
+                  LinkedIn (open to connect)
+                </a>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-primary/50 flex items-center justify-center">
+                  <i class="fab fa-github text-white text-xs"></i>
+                </span>
+                <a href="https://github.com/DhvaniMistry" target="_blank" class="hover:text-neutral">
+                  github.com/DhvaniMistry
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-6 text-[0.7rem] text-textSoft">
+            Based in Ames, Iowa · Happy to talk about software engineering, systems, and internships/full-time roles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surface text-textMain py-10 border-t border-[#29302E]">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <h3 class="text-xl font-semibold mb-1">Dhvani Mistry</h3>
+          <p class="text-sm text-textSoft">Senior Computer Science Student • Iowa State University</p>
+        </div>
+        <div class="flex items-center gap-4 text-textSoft">
+          <a href="https://www.linkedin.com/" target="_blank" class="hover:text-neutral transition-colors" aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="https://github.com/DhvaniMistry" target="_blank" class="hover:text-neutral transition-colors" aria-label="GitHub">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="mailto:dhvanimm@iastate.edu" class="hover:text-neutral transition-colors" aria-label="Email">
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-6 pt-4 text-center text-xs text-textSoft">
+        <p>&copy; 2025 Dhvani Mistry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById("mobileToggle").addEventListener("click", () => {
+      const mm = document.getElementById("mobileMenu");
+      mm.classList.toggle("hidden");
+    });
+
+    // Smooth navigation for in-page anchors
+    function handleNavigation(event, target) {
+      event.preventDefault();
+      const el = document.querySelector(target);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      // close mobile menu after click
+      const mm = document.getElementById("mobileMenu");
+      if (mm && !mm.classList.contains("hidden")) {
+        mm.classList.add("hidden");
+      }
+    }
+  </script>
+
+  <style>
+    .nav-link {
+      @apply text-textSoft hover:text-neutral transition-colors;
+    }
+  </style>
+</body>
+</html>
