@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes - Dhvani Mistry</title>
+
+  <style>
+    :root {
+      --base: #1c1c1e;
+      --surface: #2a2a2d;
+      --primary: #d7a7a0;
+      --secondary: #a8c3a0;
+      --accent: #e9cfcb;
+      --deep-green: #7b9b77;
+      --text-main: #faf9f8;
+      --text-soft: #c9c9c9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--base);
+      color: var(--text-main);
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(42, 42, 45, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      color: var(--primary);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--accent);
+    }
+
+    .recipe-hero {
+      padding: 72px 16px 64px;
+      background: linear-gradient(
+        to bottom,
+        var(--base),
+        var(--surface),
+        rgba(123, 155, 119, 0.38)
+      );
+      text-align: center;
+    }
+
+    .recipe-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      margin: 0 0 22px;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--accent);
+    }
+
+    .recipe-intro {
+      margin: 0 auto;
+      color: var(--text-soft);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .page {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 56px 16px;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .recipe-card {
+      display: block;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--surface);
+      border: 1px solid rgba(215, 167, 160, 0.22);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(215, 167, 160, 0.75);
+      box-shadow: 0 22px 48px rgba(215, 167, 160, 0.16);
+    }
+
+    .recipe-image-wrap {
+      aspect-ratio: 4 / 3;
+      background: var(--base);
+      overflow: hidden;
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .recipe-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .recipe-content {
+      padding: 20px;
+    }
+
+    .recipe-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    .recipe-tag {
+      color: var(--secondary);
+      background: rgba(168, 195, 160, 0.14);
+      border-radius: 999px;
+      padding: 4px 12px;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 500;
+    }
+
+    .recipe-title {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+
+    .recipe-details {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .copyright-note {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .page-title {
+        font-size: 2.35rem;
+      }
+
+      .recipe-hero {
+        padding: 56px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top-nav">
+    <nav class="nav-container">
+      <a href="recipe/index.html" class="brand">Dhvani Mistry</a>
+
+      <div class="nav-links">
+        <a href="recipe/index.html#home">Portfolio</a>
+        <a href="recipe/portfolio-about.html#fitness">Fitness</a>
+        <a href="recipe/portfolio-about.html#plants">Plant Corner</a>
+        <a href="recipe/portfolio-about.html#community">Community</a>
+        <a href="../recipes.html" class="active">View My Recipes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="recipe-hero">
+      <div class="recipe-hero-inner">
+        <h1 class="page-title">Cooking &amp; Shared Meals</h1>
+
+        <p class="recipe-intro">
+          This page is an extension of my story beyond code. Cooking has always been my way of staying connected —
+          to my family, to traditions, and to the small moments that turn into lasting memories.
+          These recipes are the ones I come back to, the ones I tweak, share, and recreate so the people around me
+          can re-enjoy meals we've loved together.
+          <br><br>
+          Some are rooted in tradition, others are experiments, but all of them carry a bit of familiarity —
+          the kind that makes a meal feel like home no matter where you are.
+        </p>
+      </div>
+    </section>
+
+    <section class="page">
+      <section class="recipe-grid">
+        <a href="recipe/recipe-thepla-focaccia.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/thepla_focaccia.jpg" alt="Methi Thepla Focaccia">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Fusion</span><span class="recipe-tag">Bread</span></div>
+            <h2 class="recipe-title">Methi Thepla Focaccia</h2>
+            <p class="recipe-details">20–25 min bake + overnight ferment</p>
+          </div>
+        </a>
+
+        <a href="recipe/alfredo.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/alfredo.jpg" alt="Authentic Alfredo">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Sauce</span></div>
+            <h2 class="recipe-title">Authentic Alfredo</h2>
+            <p class="recipe-details">15 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/vegetable-noodle-soup.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/vegetable-noodle-soup.jpg" alt="Vegetable Noodle Soup">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Soup</span></div>
+            <h2 class="recipe-title">Vegetable Noodle Soup</h2>
+            <p class="recipe-details">35 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/gnocchi.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/gnocchi.jpg" alt="Potato Gnocchi">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Pasta</span></div>
+            <h2 class="recipe-title">Potato Gnocchi</h2>
+            <p class="recipe-details">60 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/mushroom-bowl.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/oyster_mushroom_wild_rice_bowl.jpg" alt="Wild Rice Mushroom Bowl">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Fusion</span><span class="recipe-tag">Bowl</span></div>
+            <h2 class="recipe-title">Wild Rice Mushroom Bowl</h2>
+            <p class="recipe-details">35 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/pesto.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/pesto.jpg" alt="Pesto">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Pasta</span></div>
+            <h2 class="recipe-title">Pesto</h2>
+            <p class="recipe-details">10 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/apple-carrot-kale-salad.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/apple_carrot_kale_salad.jpg" alt="Apple, Carrot & Kale Salad">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Fresh</span><span class="recipe-tag">Salad</span></div>
+            <h2 class="recipe-title">Apple, Carrot & Kale Salad</h2>
+            <p class="recipe-details">20 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/chili-lime-quinoa-black-bean-salad.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/quinoa_black_bean_salad.jpg" alt="Chili-Lime Quinoa Black Bean Salad">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Fresh</span><span class="recipe-tag">Salad</span></div>
+            <h2 class="recipe-title">Chili-Lime Quinoa Black Bean Salad</h2>
+            <p class="recipe-details">30–45 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/three-cheese-filling.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/three_cheese_filling.jpg" alt="Three Cheese Filling">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Filling</span></div>
+            <h2 class="recipe-title">Three Cheese Filling</h2>
+            <p class="recipe-details">10 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/quinoa-khichdi.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/quinoa-khichdi.jpg" alt="Quinoa Khichdi">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Rice</span></div>
+            <h2 class="recipe-title">Quinoa Khichdi</h2>
+            <p class="recipe-details">10 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/butternut-squash-filling.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/butternut_squash_ravioli.jpg" alt="Butternut Squash Filling">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Pasta</span></div>
+            <h2 class="recipe-title">Butternut Squash Filling</h2>
+            <p class="recipe-details">45 min</p>
+          </div>
+        </a>
+
+        <a href="recipe/mushroom-ragu.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/mushroom_ragu.jpg" alt="Mushroom Ragu">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Pasta Sauce</span></div>
+            <h2 class="recipe-title">Mushroom Ragu</h2>
+            <p class="recipe-details">35 min</p>
+          </div>
+        </a>
+
+
+        <a href="recipe/sweet-potato-enchilada.html" class="recipe-card">
+          <div class="recipe-image-wrap">
+            <img src="recipe/photos/recipe/Food1.jpg" alt="Sweet Potato Enchilada">
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta"><span>Authentic</span><span class="recipe-tag">Baked</span></div>
+            <h2 class="recipe-title">Sweet Potato Enchilada</h2>
+            <p class="recipe-details">40 mins</p>
+          </div>
+        </a>
+</section>
+
+      <p class="copyright-note">
+        All recipes and content are © Dhvani Mistry. Images might be generated using Gemini.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

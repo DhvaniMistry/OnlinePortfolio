@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Oyster Mushroom &amp; Wild Rice Bowl</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>tailwind.config={theme:{extend:{colors:{base:'#1C1C1E',surface:'#2A2A2D',primary:'#D7A7A0',secondary:'#A8C3A0',accent:'#E9CFCB',deepGreen:'#7B9B77',warmGold:'#E6B56A',spice:'#D9825B',textMain:'#FAF9F8',textSoft:'#C9C9C9'},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 18px 45px rgba(0,0,0,0.35)',glow:'0 0 35px rgba(215,167,160,0.18)'}}}}</script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      <style>.glass-card{background:linear-gradient(145deg,rgba(42,42,45,.95),rgba(28,28,30,.92));border:1px solid rgba(215,167,160,.22)}.recipe-chip{border:1px solid rgba(233,207,203,.2);background:rgba(28,28,30,.65)}.step-card{background:rgba(28,28,30,.72);border:1px solid rgba(168,195,160,.18)}</style>
+   </head>
+   <body class="min-h-screen bg-base font-sans text-textMain">
+      <div class="fixed inset-0 -z-10 overflow-hidden">
+         <div class="absolute -top-32 -right-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl"></div>
+         <div class="absolute top-64 -left-24 h-80 w-80 rounded-full bg-deepGreen/20 blur-3xl"></div>
+         <div class="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-spice/10 blur-3xl"></div>
+      </div>
+      <main class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+         <a href="../recipes.html" class="inline-flex items-center gap-2 text-textSoft hover:text-accent transition-colors mb-8"><i class="fas fa-arrow-left"></i> Back to recipe cards</a>
+         <section class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch mb-10">
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft flex flex-col justify-center">
+               <p class="text-primary text-sm font-bold tracking-[0.28em] uppercase mb-4">Fusion Recipe</p>
+               <h1 class="text-4xl md:text-6xl font-extrabold text-accent leading-tight mb-5">Oyster Mushroom &amp; Wild Rice Bowl</h1>
+               <p class="text-textSoft text-base md:text-lg leading-8 mb-7">Warm wild rice bowl with crispy oyster mushrooms, fresh vegetables, chickpeas, greens, and lemon dressing.</p>
+               <div class="flex flex-wrap gap-3 mb-8">
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-secondary"><i class="fas fa-magic mr-2"></i>Fusion</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-warmGold"><i class="fas fa-seedling mr-2"></i>Bowl</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-textSoft"><i class="far fa-clock mr-2"></i>35 min</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-textSoft"><i class="fas fa-users mr-2"></i>3 servings</span>
+               </div>
+               <div class="grid grid-cols-3 gap-3 text-center">
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-secondary">Fusion</p>
+                     <p class="text-xs text-textSoft">style</p>
+                  </div>
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-primary">Bowl</p>
+                     <p class="text-xs text-textSoft">kind</p>
+                  </div>
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-warmGold">3 servings</p>
+                     <p class="text-xs text-textSoft">yield</p>
+                  </div>
+               </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-soft border border-primary/20 bg-surface">
+               <img src="photos/recipe/oyster_mushroom_wild_rice_bowl.jpg" alt="Oyster Mushroom &amp; Wild Rice Bowl" class="w-full h-full min-h-[360px] object-cover" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
+               <div class="hidden min-h-[360px] p-8 bg-gradient-to-br from-surface via-base to-deepGreen/40 flex items-center justify-center text-center">
+                  <div>
+                     <i class="fas fa-seedling text-6xl text-secondary mb-4"></i>
+                     <p class="text-accent font-semibold">Add your food photo here</p>
+                     <p class="text-textSoft text-sm mt-2">Save it as <code>photos/recipe/oyster_mushroom_wild_rice_bowl.jpg</code></p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 mb-10">
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft">
+               <div class="flex items-center gap-3 mb-6">
+                  <i class="fas fa-shopping-basket text-secondary text-2xl"></i>
+                  <h2 class="text-2xl md:text-3xl font-bold text-accent">Ingredients</h2>
+               </div>
+               <div class="space-y-8">
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-utensils text-secondary"></i>Wild Rice</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>1/2 cup dry wild rice blend</li>
+                        <li>1 to 1 1/4 cups water or broth/stock</li>
+                        <li>Pinch of salt</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-utensils text-secondary"></i>Mushrooms</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>10-11 oz oyster mushrooms</li>
+                        <li>1-1.5 tbsp olive oil</li>
+                        <li>1-2 cloves garlic</li>
+                        <li>3/4 tsp smoked paprika</li>
+                        <li>Salt and pepper, to taste</li>
+                        <li>1/2-3/4 lemon, zest and juice</li>
+                        <li>2 tbsp fresh parsley, chopped</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-utensils text-secondary"></i>Vegetables</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>1/2 pint cherry tomatoes</li>
+                        <li>1/2 cucumber</li>
+                        <li>1/4 red onion</li>
+                        <li>1-1.5 cups spinach or arugula</li>
+                        <li>1/2 can chickpeas, drained and rinsed</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-utensils text-secondary"></i>Dressing</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>1.5 tbsp olive oil</li>
+                        <li>1-2 tsp lemon juice</li>
+                        <li>1 tsp Dijon mustard</li>
+                        <li>1 tsp honey or maple syrup</li>
+                        <li>Salt, to taste</li>
+                        <li>Optional: tahini</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft">
+               <div class="flex items-center gap-3 mb-6">
+                  <i class="fas fa-list-ol text-secondary text-2xl"></i>
+                  <h2 class="text-2xl md:text-3xl font-bold text-accent">Method</h2>
+               </div>
+               <div class="space-y-4">
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 1</p>
+                     <p class="text-textSoft text-sm leading-7">Add water or broth and a pinch of salt to a pot. Bring to a boil.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 2</p>
+                     <p class="text-textSoft text-sm leading-7">Add wild rice and stir. Reduce heat to low, cover, and simmer with tiny bubbles for 30-35 minutes.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 3</p>
+                     <p class="text-textSoft text-sm leading-7">Tear mushrooms into pieces instead of cutting.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 4</p>
+                     <p class="text-textSoft text-sm leading-7">Heat pan on medium-high. Add oil, then mushrooms. Do not stir immediately; let them sit 2-3 minutes to brown.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 5</p>
+                     <p class="text-textSoft text-sm leading-7">Add garlic, paprika, salt, and pepper. Cook until golden and slightly crispy.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 6</p>
+                     <p class="text-textSoft text-sm leading-7">Finish mushrooms with lemon zest, lemon juice, and parsley.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 7</p>
+                     <p class="text-textSoft text-sm leading-7">Halve tomatoes, dice cucumber, thinly slice onion, and keep greens fresh or roughly chop.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 8</p>
+                     <p class="text-textSoft text-sm leading-7">Whisk dressing ingredients in a small bowl. Taste and adjust.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 9</p>
+                     <p class="text-textSoft text-sm leading-7">Layer warm wild rice, vegetables, mushrooms, and dressing on top.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="glass-card rounded-3xl p-6 shadow-soft">
+               <i class="fas fa-toolbox text-warmGold text-3xl mb-4"></i>
+               <h3 class="text-xl font-bold text-accent mb-3">Materials</h3>
+               <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                  <li>Pot</li>
+                  <li>Pan</li>
+                  <li>Small bowl</li>
+                  <li>Knife</li>
+                  <li>Cutting board</li>
+                  <li>Whisk</li>
+               </ul>
+            </div>
+            <div class="glass-card rounded-3xl p-6 shadow-soft">
+               <i class="fas fa-heart text-primary text-3xl mb-4"></i>
+               <h3 class="text-xl font-bold text-accent mb-3">Diary Note / Tip</h3>
+               <p class="text-sm text-textSoft leading-7">Do not stir the mushrooms right away. Browning first gives them better texture.</p>
+            </div>
+         </section>
+      </main>
+   </body>
+</html>

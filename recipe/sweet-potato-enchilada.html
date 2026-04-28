@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sweet Potato Enchilada</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+         tailwind.config = {
+            theme: {
+            extend: {
+               colors: {
+                  base: "#1C1C1E",
+                  surface: "#2A2A2D",
+                  primary: "#D7A7A0",
+                  secondary: "#A8C3A0",
+                  accent: "#E9CFCB",
+                  deepGreen: "#7B9B77",
+                  warmGold: "#E6B56A",
+                  spice: "#D9825B",
+                  textMain: "#FAF9F8",
+                  textSoft: "#C9C9C9"
+               }
+            }
+            }
+         }
+      </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      <style>.glass-card{background:linear-gradient(145deg,rgba(42,42,45,.95),rgba(28,28,30,.92));border:1px solid rgba(215,167,160,.22)}.recipe-chip{border:1px solid rgba(233,207,203,.2);background:rgba(28,28,30,.65)}.step-card{background:rgba(28,28,30,.72);border:1px solid rgba(168,195,160,.18)}</style>
+   </head>
+
+   <body class="min-h-screen bg-base font-sans text-textMain">
+      <div class="fixed inset-0 -z-10 overflow-hidden">
+         <div class="absolute -top-32 -right-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl"></div>
+         <div class="absolute top-64 -left-24 h-80 w-80 rounded-full bg-deepGreen/20 blur-3xl"></div>
+         <div class="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-spice/10 blur-3xl"></div>
+      </div>
+
+      <main class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+         <a href="../recipes.html" class="inline-flex items-center gap-2 text-textSoft hover:text-accent transition-colors mb-8">
+            <i class="fas fa-arrow-left"></i> Back to recipe cards
+         </a>
+
+         <section class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch mb-10">
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft flex flex-col justify-center">
+               <p class="text-primary text-sm font-bold tracking-[0.28em] uppercase mb-4">Mexican Recipe</p>
+               <h1 class="text-4xl md:text-6xl font-extrabold text-accent leading-tight mb-5">
+                  Sweet Potato Enchilada
+               </h1>
+               <p class="text-textSoft text-base md:text-lg leading-8 mb-7">
+                  A cozy vegetarian enchilada filled with roasted sweet potatoes, black beans, warm spices, and melty cheese, baked in enchilada sauce until comforting and flavorful.
+               </p>
+
+               <div class="flex flex-wrap gap-3 mb-8">
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-secondary"><i class="fas fa-magic mr-2"></i>Mexican</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-warmGold"><i class="fas fa-utensils mr-2"></i>Baked</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-textSoft"><i class="far fa-clock mr-2"></i>40  mins</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-textSoft"><i class="fas fa-users mr-2"></i>4</span>
+               </div>
+
+               <div class="grid grid-cols-3 gap-3 text-center">
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-secondary">Mexican</p>
+                     <p class="text-xs text-textSoft">style</p>
+                  </div>
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-primary">Baked</p>
+                     <p class="text-xs text-textSoft">kind</p>
+                  </div>
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-warmGold">4</p>
+                     <p class="text-xs text-textSoft">yield</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="rounded-3xl overflow-hidden shadow-soft border border-primary/20 bg-surface">
+               <img src="photos/recipe/Food1.jpg" alt="Sweet Potato Enchilada" class="w-full h-full min-h-[360px] object-cover" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
+               <div class="hidden min-h-[360px] p-8 bg-gradient-to-br from-surface via-base to-deepGreen/40 flex items-center justify-center text-center">
+                  <div>
+                     <i class="fas fa-utensils text-6xl text-secondary mb-4"></i>
+                     <p class="text-accent font-semibold">Add your food photo here</p>
+                     <p class="text-textSoft text-sm mt-2">Save it as <code>photos/recipe/sweet_potato_enchilada.jpg</code></p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 mb-10">
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft">
+               <div class="flex items-center gap-3 mb-6">
+                  <i class="fas fa-shopping-basket text-secondary text-2xl"></i>
+                  <h2 class="text-2xl md:text-3xl font-bold text-accent">Ingredients</h2>
+               </div>
+
+               <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>2 medium sweet potatoes, peeled and diced</li>
+                        <li>1 tbsp olive oil</li>
+                        <li>1 tsp cumin</li>
+                        <li>1 tsp chili powder</li>
+                        <li>½ tsp smoked paprika</li>
+                        <li>Salt and pepper to taste</li>
+                        <li>1 cup black beans, rinsed and drained</li>
+                        <li>½ cup corn</li>
+                        <li>1 cup shredded cheese</li>
+                        <li>6–8 tortillas</li>
+                        <li>1½ cups enchilada sauce</li>
+                        <li>Optional: cilantro, lime, sour cream, gauss, veggies of choice</li>
+               </ul>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft">
+               <div class="flex items-center gap-3 mb-6">
+                  <i class="fas fa-list-ol text-secondary text-2xl"></i>
+                  <h2 class="text-2xl md:text-3xl font-bold text-accent">Method</h2>
+               </div>
+
+               <div class="space-y-4">
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 1 — Preheat oven to 400°F</p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Preheat oven to 400°F.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 2 </p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Toss sweet potatoes and veggies with olive oil, cumin, chili powder, smoked paprika, salt, and pepper.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 3</p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Roast for 20–25 minutes, until tender.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 4 </p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Mix roasted sweet potatoes with black beans, corn, and half the cheese.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 5</p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Spread a little enchilada sauce on the bottom of a baking dish.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 6 </p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Fill each tortilla with the sweet potato mixture, roll tightly, and place seam-side down.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 7</p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Pour remaining enchilada sauce over the tortillas.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 8</p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Top with remaining cheese.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 9 </p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Bake for 15–20 minutes, until bubbly and golden.
+                     </p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 10</p>
+                     <p class="text-textSoft text-sm leading-7">
+                        Garnish with cilantro, lime, guac, or sour cream.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="glass-card rounded-3xl p-6 shadow-soft">
+               <i class="fas fa-toolbox text-warmGold text-3xl mb-4"></i>
+               <h3 class="text-xl font-bold text-accent mb-3">Materials</h3>
+               <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                  Tray
+
+               </ul>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 shadow-soft">
+               <i class="fas fa-heart text-primary text-3xl mb-4"></i>
+               <h3 class="text-xl font-bold text-accent mb-3">Diary Note / Tip</h3>
+               <p class="text-sm text-textSoft leading-7">
+                  Warm the tortillas before rolling so they do not crack.
+               </p>
+            </div>
+         </section>
+      </main>
+   </body>
+</html>

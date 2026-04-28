@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quinoa Khichdi</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: "#1C1C1E",
+            surface: "#2A2A2D",
+            primary: "#D7A7A0",
+            secondary: "#A8C3A0",
+            accent: "#E9CFCB",
+            deepGreen: "#7B9B77",
+            warmGold: "#E6B56A",
+            spice: "#D9825B",
+            textMain: "#FAF9F8",
+            textSoft: "#C9C9C9"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="bg-base text-textMain font-sans">
+
+<div class="max-w-6xl mx-auto px-4 py-12">
+
+  <!-- Back -->
+  <a href="../recipes.html" class="text-textSoft hover:text-accent mb-8 inline-block">
+    ← Back to recipes
+  </a>
+
+  <!-- Header -->
+  <div class="grid lg:grid-cols-2 gap-8 mb-10">
+
+    <div class="bg-surface p-8 rounded-3xl shadow-xl">
+      <p class="text-secondary uppercase tracking-widest text-sm mb-3">Fusion Recipe</p>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-accent mb-5">
+        Quinoa Khichdi
+      </h1>
+
+      <p class="text-textSoft mb-6">
+        A cozy, protein-rich khichdi made with quinoa and moong dal. Comfort food,
+        but lighter, healthier, and packed with vegetables and warming spices.
+      </p>
+
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="bg-base px-4 py-2 rounded-full text-secondary">Fusion</span>
+        <span class="bg-base px-4 py-2 rounded-full text-warmGold">Khichdi</span>
+        <span class="bg-base px-4 py-2 rounded-full text-textSoft">30–35 min</span>
+        <span class="bg-base px-4 py-2 rounded-full text-textSoft">3 servings</span>
+      </div>
+    </div>
+
+    <div class="rounded-3xl overflow-hidden shadow-xl">
+      <img src="photos/recipe/quinoa_khichdi.jpg"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+
+      <div class="hidden bg-surface h-full flex items-center justify-center text-center p-6">
+        <div>
+          <i class="fas fa-utensils text-5xl text-secondary mb-3"></i>
+          <p class="text-textSoft">Add photo: photos/recipe/quinoa_khichdi.jpg</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ingredients + Method -->
+  <div class="grid lg:grid-cols-2 gap-10">
+
+    <!-- INGREDIENTS -->
+    <div class="bg-surface p-8 rounded-3xl shadow-xl">
+      <h2 class="text-2xl text-accent mb-6">Ingredients</h2>
+
+      <h3 class="text-primary font-semibold mb-2">Base</h3>
+      <ul class="text-textSoft mb-6 list-disc ml-5 space-y-1">
+        <li>½ cup quinoa (rinsed well)</li>
+        <li>¼ cup yellow moong dal</li>
+        <li>2–2½ cups water</li>
+        <li>1 tbsp ghee or oil</li>
+      </ul>
+
+      <h3 class="text-primary font-semibold mb-2">Vegetables</h3>
+      <ul class="text-textSoft mb-6 list-disc ml-5 space-y-1">
+        <li>¼ cup onion (chopped)</li>
+        <li>¼ cup tomato (chopped)</li>
+        <li>¼ cup carrot (diced)</li>
+        <li>¼ cup peas</li>
+        <li>Optional: spinach, zucchini, bell pepper</li>
+      </ul>
+
+      <h3 class="text-primary font-semibold mb-2">Spices</h3>
+      <ul class="text-textSoft list-disc ml-5 space-y-1">
+        <li>½ tsp cumin seeds</li>
+        <li>½ tsp turmeric</li>
+        <li>½ tsp ginger (grated)</li>
+        <li>1 garlic clove</li>
+        <li>Pinch hing</li>
+        <li>Salt to taste</li>
+        <li>Optional chili</li>
+      </ul>
+    </div>
+
+    <!-- METHOD -->
+    <div class="bg-surface p-8 rounded-3xl shadow-xl">
+      <h2 class="text-2xl text-accent mb-6">Method</h2>
+
+      <ol class="text-textSoft list-decimal ml-5 space-y-4">
+        <li>Rinse quinoa and moong dal well.</li>
+        <li>Heat ghee or oil, add cumin seeds and hing.</li>
+        <li>Add ginger, garlic, onion. Sauté until fragrant.</li>
+        <li>Add tomato, vegetables, turmeric, salt, chili.</li>
+        <li>Add quinoa, dal, and water.</li>
+        <li>Cover and simmer 20–25 minutes.</li>
+        <li>Add more water for softer texture.</li>
+        <li>Finish with ghee, cilantro, or lemon juice.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- Tips -->
+  <div class="bg-surface mt-10 p-6 rounded-3xl shadow-xl">
+    <h3 class="text-accent font-semibold mb-3">Tip</h3>
+    <p class="text-textSoft text-sm">
+      Rinse quinoa well to remove bitterness. For softer khichdi,
+      increase water and cook longer for a porridge-like consistency.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

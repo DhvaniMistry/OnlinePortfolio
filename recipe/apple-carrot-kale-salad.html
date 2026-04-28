@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Apple, Carrot &amp; Kale Salad</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>tailwind.config={theme:{extend:{colors:{base:'#1C1C1E',surface:'#2A2A2D',primary:'#D7A7A0',secondary:'#A8C3A0',accent:'#E9CFCB',deepGreen:'#7B9B77',warmGold:'#E6B56A',spice:'#D9825B',textMain:'#FAF9F8',textSoft:'#C9C9C9'},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 18px 45px rgba(0,0,0,0.35)',glow:'0 0 35px rgba(215,167,160,0.18)'}}}}</script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      <style>.glass-card{background:linear-gradient(145deg,rgba(42,42,45,.95),rgba(28,28,30,.92));border:1px solid rgba(215,167,160,.22)}.recipe-chip{border:1px solid rgba(233,207,203,.2);background:rgba(28,28,30,.65)}.step-card{background:rgba(28,28,30,.72);border:1px solid rgba(168,195,160,.18)}</style>
+   </head>
+   <body class="min-h-screen bg-base font-sans text-textMain">
+      <div class="fixed inset-0 -z-10 overflow-hidden">
+         <div class="absolute -top-32 -right-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl"></div>
+         <div class="absolute top-64 -left-24 h-80 w-80 rounded-full bg-deepGreen/20 blur-3xl"></div>
+         <div class="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-spice/10 blur-3xl"></div>
+      </div>
+      <main class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+         <a href="../recipes.html" class="inline-flex items-center gap-2 text-textSoft hover:text-accent transition-colors mb-8"><i class="fas fa-arrow-left"></i> Back to recipe cards</a>
+         <section class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch mb-10">
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft flex flex-col justify-center">
+               <p class="text-primary text-sm font-bold tracking-[0.28em] uppercase mb-4">Fresh Recipe</p>
+               <h1 class="text-4xl md:text-6xl font-extrabold text-accent leading-tight mb-5">Apple, Carrot &amp; Kale Salad</h1>
+               <p class="text-textSoft text-base md:text-lg leading-8 mb-7">A crisp nutrient-dense salad that practices chiffonade, julienne, and small dice knife skills.</p>
+               <div class="flex flex-wrap gap-3 mb-8">
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-secondary"><i class="fas fa-magic mr-2"></i>Fresh</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-warmGold"><i class="fas fa-seedling mr-2"></i>Salad</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-textSoft"><i class="far fa-clock mr-2"></i>20 min</span>
+                  <span class="recipe-chip rounded-full px-4 py-2 text-sm text-textSoft"><i class="fas fa-users mr-2"></i>3-4 servings</span>
+               </div>
+               <div class="grid grid-cols-3 gap-3 text-center">
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-secondary">Fresh</p>
+                     <p class="text-xs text-textSoft">style</p>
+                  </div>
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-primary">Salad</p>
+                     <p class="text-xs text-textSoft">kind</p>
+                  </div>
+                  <div class="rounded-2xl bg-surface/70 p-4 border border-primary/15">
+                     <p class="text-xl font-bold text-warmGold">3-4 servings</p>
+                     <p class="text-xs text-textSoft">yield</p>
+                  </div>
+               </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-soft border border-primary/20 bg-surface">
+               <img src="photos/recipe/apple_carrot_kale_salad.jpg" alt="Apple, Carrot &amp; Kale Salad" class="w-full h-full min-h-[360px] object-cover" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
+               <div class="hidden min-h-[360px] p-8 bg-gradient-to-br from-surface via-base to-deepGreen/40 flex items-center justify-center text-center">
+                  <div>
+                     <i class="fas fa-seedling text-6xl text-secondary mb-4"></i>
+                     <p class="text-accent font-semibold">Add your food photo here</p>
+                     <p class="text-textSoft text-sm mt-2">Save it as <code>photos/recipe/apple_carrot_kale_salad.jpg</code></p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 mb-10">
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft">
+               <div class="flex items-center gap-3 mb-6">
+                  <i class="fas fa-shopping-basket text-secondary text-2xl"></i>
+                  <h2 class="text-2xl md:text-3xl font-bold text-accent">Ingredients</h2>
+               </div>
+               <div class="space-y-8">
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-seedling text-secondary"></i>Salad</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>3 kale leaves, chiffonade</li>
+                        <li>6 baby carrot sticks, julienne</li>
+                        <li>1 1/2 tart apples, small dice</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-utensils text-secondary"></i>Vinaigrette</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>1/4 cup olive oil, or slightly less</li>
+                        <li>1 tbsp orange juice</li>
+                        <li>1 tbsp lemon juice</li>
+                        <li>1 tbsp honey</li>
+                        <li>1 tbsp vinegar</li>
+                        <li>Pinch salt and pepper</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="flex items-center gap-3 text-xl font-bold text-primary mb-3"><i class="fas fa-utensils text-secondary"></i>Optional</h3>
+                     <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                        <li>Toasted nuts</li>
+                        <li>Dried fruit</li>
+                        <li>Crumbled cheese</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-soft">
+               <div class="flex items-center gap-3 mb-6">
+                  <i class="fas fa-list-ol text-secondary text-2xl"></i>
+                  <h2 class="text-2xl md:text-3xl font-bold text-accent">Method</h2>
+               </div>
+               <div class="space-y-4">
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 1</p>
+                     <p class="text-textSoft text-sm leading-7">Whisk olive oil, juices, honey, vinegar, and a tiny amount of salt and pepper in a small bowl.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 2</p>
+                     <p class="text-textSoft text-sm leading-7">Cut kale into chiffonade, carrots into julienne, and apples into small dice.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 3</p>
+                     <p class="text-textSoft text-sm leading-7">After practicing julienne on carrots, cut them into small dice if preferred.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 4</p>
+                     <p class="text-textSoft text-sm leading-7">Add kale, carrots, and apples to a large bowl.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 5</p>
+                     <p class="text-textSoft text-sm leading-7">Whisk vinaigrette again, pour over salad, and toss well.</p>
+                  </div>
+                  <div class="step-card rounded-2xl p-5">
+                     <p class="text-primary font-bold mb-1">Step 6</p>
+                     <p class="text-textSoft text-sm leading-7">Serve with optional nuts, dried fruit, or crumbled cheese.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="glass-card rounded-3xl p-6 shadow-soft">
+               <i class="fas fa-toolbox text-warmGold text-3xl mb-4"></i>
+               <h3 class="text-xl font-bold text-accent mb-3">Materials</h3>
+               <ul class="list-disc ml-5 space-y-2 text-textSoft">
+                  <li>Cutting board</li>
+                  <li>Chef knife</li>
+                  <li>Large bowl</li>
+                  <li>Small bowl</li>
+                  <li>Whisk</li>
+                  <li>Measuring spoons</li>
+               </ul>
+            </div>
+            <div class="glass-card rounded-3xl p-6 shadow-soft">
+               <i class="fas fa-heart text-primary text-3xl mb-4"></i>
+               <h3 class="text-xl font-bold text-accent mb-3">Diary Note / Tip</h3>
+               <p class="text-sm text-textSoft leading-7">Start with a tiny amount of salt and pepper, then adjust to taste.</p>
+            </div>
+         </section>
+      </main>
+   </body>
+</html>
